@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="711.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.proyecto.yamaha.proyecto_yamaha.viewController.AplicacionView">
+   <children>
+      <TabPane prefHeight="700.0" prefWidth="690.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Empleado">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="625.0" prefWidth="690.0">
+                     <children>
+                        <SplitPane layoutX="-3.0" layoutY="2.0" orientation="VERTICAL" prefHeight="628.0" prefWidth="756.0">
+                          <items>
+                           <fx:include source="../Empleado/empleado-view.fxml" />
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Cliente">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                            <SplitPane layoutX="-3.0" layoutY="2.0" orientation="VERTICAL" prefHeight="769.0" prefWidth="1006.0">
+                                <items>
+                                    <fx:include source="../Cliente/cliente-view.fxml" />
+                                </items>
+                            </SplitPane>
+                        </children>
+                    </AnchorPane>
+                </content>
+            </Tab>
+            <Tab text="Productos">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                            <SplitPane layoutX="-3.0" layoutY="2.0" orientation="VERTICAL" prefHeight="769.0" prefWidth="1006.0">
+                                <items>
+                                    <fx:include source="../Producto/producto-view.fxml" />
+                                </items>
+                            </SplitPane>
+                        </children>
+                    </AnchorPane>
+                </content>
+            </Tab>
+            <Tab text="Ventas">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                            <SplitPane layoutX="-3.0" layoutY="2.0" orientation="VERTICAL" prefHeight="769.0" prefWidth="1006.0">
+                                <items>
+                                    <fx:include source="../Ventas/ventas-view.fxml" />
+                                </items>
+                            </SplitPane>
+                        </children>
+                    </AnchorPane>
+                </content>
+            </Tab>
+            <Tab text="Mantenimiento">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                            <SplitPane layoutX="-3.0" layoutY="2.0" orientation="VERTICAL" prefHeight="769.0" prefWidth="1006.0">
+                                <items>
+                                    <fx:include source="../Mantenimiento/MantenimientoView.fxml" />
+                                </items>
+                            </SplitPane>
+                        </children>
+                    </AnchorPane>
+                </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

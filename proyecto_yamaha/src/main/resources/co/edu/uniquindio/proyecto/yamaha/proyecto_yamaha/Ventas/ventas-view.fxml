@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="624.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.proyecto.yamaha.proyecto_yamaha.viewController.VentasViewController">
+   <children>
+      <SplitPane dividerPositions="0.5" layoutY="-1.0" orientation="VERTICAL" prefHeight="630.0" prefWidth="660.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="558.0" prefWidth="659.0">
+               <children>
+                  <HBox prefHeight="40.0" prefWidth="670.0" style="-fx-background-color: RED; -fx-border-color: #ffffff;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="40.0" prefWidth="246.0" text="Ventas" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="21.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <DatePicker fx:id="fechaVenta" layoutX="78.0" layoutY="56.0" prefHeight="25.0" prefWidth="221.0" promptText="SELECCIONE FECHA" style="-fx-background-color: Transparente; -fx-border-color: RED;" />
+                  <Label layoutX="14.0" layoutY="61.0" text="Fecha">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="423.0" layoutY="181.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="423.0" layoutY="48.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="355.0" layoutY="59.0" text="Medio de pago">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="infoEmpleadoVenta" layoutX="78.0" layoutY="112.0" prefHeight="25.0" prefWidth="221.0" promptText="INGRESE NOMBRE DEL EMPELADO" style="-fx-background-color: Transparente; -fx-border-color: RED; -fx-border-width: 0px 0px 2px 0px;" />
+                  <RadioButton fx:id="Efectivo" layoutX="453.0" layoutY="59.0" mnemonicParsing="false" text="Efectivo">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="MedioDePago" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="Tarjeta" layoutX="542.0" layoutY="59.0" mnemonicParsing="false" text="Tarjeta" toggleGroup="$MedioDePago">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </RadioButton>
+                  <Label layoutX="14.0" layoutY="114.0" text="Empleado">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="357.0" layoutY="114.0" text="Cliente">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="InfoClienteVenta" layoutX="410.0" layoutY="112.0" prefHeight="25.0" prefWidth="221.0" promptText="INGRESE NOMBRE DEL CLIENTE" style="-fx-background-color: Transparente; -fx-border-color: RED; -fx-border-width: 0px 0px 2px 0px;" />
+                  <Button fx:id="btnAgregarDetalles" layoutX="147.0" layoutY="166.0" mnemonicParsing="false" onAction="#onAgregarDetalles" prefHeight="30.0" prefWidth="178.0" style="-fx-background-color: RED;" text="Agregar Detalles" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnAgregarMantenimiento" layoutX="364.0" layoutY="166.0" mnemonicParsing="false" onAction="#onAgregarMantenimiento" prefHeight="30.0" prefWidth="178.0" style="-fx-background-color: RED;" text="Agregar Mantenimiento" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="181.0" layoutY="221.0" prefHeight="20.0" prefWidth="43.0" text="Total">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="totalVenta" layoutX="224.0" layoutY="217.0" prefHeight="27.0" prefWidth="221.0" style="-fx-background-color: Transparente; -fx-border-color: RED; -fx-border-width: 0px 0px 2px 0px;" />
+                  <Button fx:id="btnGuardarVenta" layoutX="286.0" layoutY="271.0" mnemonicParsing="false" onAction="#onGuardarVenta" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: RED;" text="Guardar" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnLimpearVenta" layoutX="147.0" layoutY="271.0" mnemonicParsing="false" onAction="#onLimpearVenta" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: RED;" text="Nuevo" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEliminarVenta" layoutX="429.0" layoutY="271.0" mnemonicParsing="false" onAction="#onEliminarVenta" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: RED;" text="Eliminar" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="373.0" prefWidth="583.0">
+               <children>
+                  <TableView fx:id="tablaVenta" layoutX="3.0" layoutY="14.0" prefHeight="276.0" prefWidth="651.0" style="-fx-border-color: RED;">
+                    <columns>
+                      <TableColumn fx:id="tcFecha" prefWidth="160.0" text="Fecha" />
+                      <TableColumn fx:id="tcIdEmpleado" prefWidth="165.0" text="ID Empleado" />
+                        <TableColumn fx:id="tcIdCliente" prefWidth="165.0" text="ID Cliente" />
+                        <TableColumn fx:id="tcTotal" prefWidth="160.0" text="Total" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="490.0" prefWidth="908.0" style="-fx-background-color: RED;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.proyecto.yamaha.proyecto_yamaha.viewController.LoginViewController">
+   <children>
+      <ImageView fitHeight="418.0" fitWidth="387.0" layoutX="31.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imagenes/login/yamaha.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="443.0" prefHeight="490.0" prefWidth="480.0" style="-fx-background-color: white;">
+         <children>
+            <TextField fx:id="username" layoutX="115.0" layoutY="196.0" prefHeight="25.0" prefWidth="294.0" promptText="INGRESE SU USUARIO" style="-fx-background-color: transparente; -fx-border-color: RED; -fx-border-width: 0px 0px 2px 0px;" />
+            <PasswordField fx:id="password" layoutX="115.0" layoutY="242.0" prefHeight="25.0" prefWidth="294.0" promptText="INGRESE SU CONTRASEÑA" style="-fx-background-color: transparente; -fx-border-color: RED; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button fx:id="btnlogin" layoutX="178.0" layoutY="328.0" mnemonicParsing="false" onAction="#onLogin" prefHeight="34.0" prefWidth="123.0" style="-fx-background-color: RED;" text="Ingresar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <Text fill="RED" fontSmoothingType="LCD" layoutX="95.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="293.22119140625">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+               <effect>
+                  <Glow level="0.0" />
+               </effect>
+            </Text>
+            <ImageView fitHeight="23.0" fitWidth="22.0" layoutX="82.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/login/icones-d-administration-rouge.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="23.0" fitWidth="22.0" layoutX="82.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/login/llave.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="142.0" fitWidth="155.0" layoutX="164.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/login/revs-your-dream.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
